@@ -1,0 +1,120 @@
+<style>
+    .item_li  span{
+        color: #ffffff !important;
+        font-size: 14px;
+    }
+    .item_li_img{
+        width: 15px;
+        height: 50px;
+        margin-right: 7px;
+        cursor: pointer;
+    }
+    .elementor-icon-list-items{
+        background-color: rgb(102, 103, 103);
+    }
+    .elementor-icon-list-items {
+  background-color: rgb(102, 103, 103);
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+    .elementor-icon-list-items > li {
+  display: flex;
+  align-items: center;
+}
+
+</style>
+<div class="elementor-element elementor-element-1d7c3f6 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+    data-id="1d7c3f6" data-element_type="widget" data-widget_type="icon-list.default">
+    <div class="elementor-widget-container">
+        <ul class="elementor-icon-list-items">
+            <li class="elementor-icon-list-item item_li">
+                <img  class="item_li_img" onclick="copyContentphone1()" src="http://rpc61.ru/wp-content/uploads/copy-solid.svg" />
+                <a href="tel:88632261099"> <span class="elementor-icon-list-text">Звоните: 8 (863) 226-10-99 <span id="phone1" style="display: none;">
+                    8 (863) 226-10-99 </span>
+                </span>
+                
+                </a>
+                
+            </li>
+            <li class="elementor-icon-list-item item_li">
+                <img class="item_li_img" onclick="copyContentphone2()" src="http://rpc61.ru/wp-content/uploads/copy-solid.svg" />
+                <a href="tel:89281028250"> <span class="elementor-icon-list-text">Звоните: 8 (928) 102-82-50
+                    <span id="phone2"  style="display: none;">
+                        8 (928) 102-82-50 </span>
+
+                </span>
+                </a>
+            </li>
+            <li class="elementor-icon-list-item item_li">
+                <a href="https://api.whatsapp.com/send?phone=tel:+79381648943"> <span
+                        class="elementor-icon-list-text">Пишите в WhatsApp: 7 (938) 164-89-43</span>
+                </a>
+                
+            </li>
+            <li class="elementor-icon-list-item item_li">
+                <span class="elementor-icon-list-text">Приходите: Ростов-на-Дону, ул. Пушкинская, д. 63</span>
+            </li>
+            <li class="elementor-icon-list-item  item_li">
+                <span class="elementor-icon-list-text">Время работы: Пн-Вс: 8-00 по 20-00</span>
+            </li>
+            <li class="elementor-icon-list-item item_li">
+                <img  class="item_li_img" onclick="copyContentmailto1()" src="http://rpc61.ru/wp-content/uploads/copy-solid.svg" />
+                <a href="mailto:recp1@rpc61.ru"> <span class="elementor-icon-list-text" id="mailto1">recp1@rpc61.ru</span>
+                </a>
+            </li>
+            <li class="elementor-icon-list-item elementor-icon-list-item item_li">
+                 <img  onclick="copyContentmailto2()" class="item_li_img" src="http://rpc61.ru/wp-content/uploads/copy-solid.svg" />
+                <a href="mailto:recp2@rpc61.ru"> <span class="elementor-icon-list-text" id="mailto2">recp2@rpc61.ru</span>
+                </a>
+               
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+  let mailto2 = document.getElementById('mailto2').innerHTML;
+  let mailto1 = document.getElementById('mailto1').innerHTML;
+  let phone1 = document.getElementById('phone1').innerHTML;
+  let phone2 = document.getElementById('phone2').innerHTML;
+  const copyContentmailto2 = async () => {
+    try {
+      await navigator.clipboard.writeText(mailto2);
+      alert(true);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+  const copyContentmailto1 = async () => {
+    try {
+      await navigator.clipboard.writeText(mailto1);
+      alert(true);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+  const copyContentphone1 = async () => {
+    try {
+      await navigator.clipboard.writeText(phone1);
+      alert(true);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+  const copyContentphone2 = async () => {
+    try {
+      await navigator.clipboard.writeText(phone2);
+      alert(true);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+</script>
+
